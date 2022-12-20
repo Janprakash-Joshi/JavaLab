@@ -1,0 +1,16 @@
+import java.io.*;
+public class Byte_Streams {
+    public static void main(String[] args) throws IOException {
+        FileInputStream in = null;
+        FileOutputStream out = null;
+        in=new FileInputStream("C:\\Users\\HP\\Desktop\\input.txt");
+        out= new FileOutputStream("C:\\Users\\HP\\Desktop\\output.txt");
+        int c;
+        while((c=in.read())!=-1){
+            out.write(c);
+            System.out.print((char)c);
+        }
+        in.close();
+        out.close();
+    }
+}
